@@ -1,10 +1,5 @@
 from dataModeOn import processing
-import pprint
 
-pull = processing("./data/pull.txt")
+pull = processing("./data/dummydata.txt")
 pull.theLoop()
-result = pull.getDic()
-pprint.pprint(result)
-
-
-
+print(pull.exportjson())

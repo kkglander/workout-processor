@@ -1,6 +1,4 @@
 #This file should deal entirely with creating the json/dictionary so that other files can use it 
-#TODO:
-#   [x] - Make a export function that converts dic to valid json obj
 
 import re, jsonR
 

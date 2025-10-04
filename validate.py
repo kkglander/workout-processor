@@ -41,7 +41,7 @@ class Validate:
     def movementPatternValidation(self) -> None:
         currLine = self.__data[self.__index]
         while currLine != "":
-            search = re.search(r".+(?= [-]) -( \d+(?=[x]))x(\d+(lbs|kg)(?=;))(; *\d+x\d+(lbs|kg))*;", currLine.lower())
+            search = re.search(r".+(?= [-]) -( \d+(?=[x]))x(\d+(lbs|kg)(?=;))(; *\d+x\d+(lbs|kg))*;(?!.)", currLine.lower())
             if search == None:
                 #its doesn't match the pattern so we add it to the list
                 self.__deviationsList.append(self.__index)

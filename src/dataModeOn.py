@@ -1,8 +1,9 @@
-#This file should deal entirely with creating the json/dictionary so that other files can use it 
+#This file deals with creating the json/dictionary
+#I think you would want some sort of 'name' system where when 
 
 import re, jsonR
 
-class processing:
+class Processing:
     def __init__(self, file):
         self.file = file
         with open(self.file,"r") as f:
@@ -54,10 +55,13 @@ class processing:
     def getDic(self):
         return self.__dic
 
-    def exportjson(self):
+    def getjson(self):
         return jsonR.dict2json(self.__dic)
+    
+    def 
 
 
 if __name__ == "__main__":
-    pull = processing("./data/pull.txt")
+    pull = Processing("./data/pull.txt")
     pull.theLoop()
+    print(pull.getDic())
